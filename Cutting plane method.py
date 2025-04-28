@@ -83,23 +83,3 @@ def cutting_plane_method(c, A, b, max_iter=100):
 
     print("Максимальное число итераций достигнуто.")
     return x, val
-
-if __name__ == "__main__":
-    # max z = 3x1 + 2x2
-    # s.t.
-    #    2x1 + x2 <= 18
-    #    2x1 + 3x2 <= 42
-    #    3x1 + x2 <= 24
-    #    x1, x2 >= 0
-
-    c = [3, 2]
-    A = np.array([
-        [2, 1],
-        [2, 3],
-        [3, 1]
-    ])
-    b = np.array([18, 42, 24])
-
-    x_opt, val_opt = cutting_plane_method(c, A, b)
-    print("Оптимальное решение:", x_opt)
-    print("Значение функции:", val_opt)
