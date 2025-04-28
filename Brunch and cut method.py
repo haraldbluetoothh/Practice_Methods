@@ -97,24 +97,3 @@ def branch_and_cut(c, A, b, best_val=float('-inf'), best_x=None, depth=0, max_de
     best_x, best_val = branch_and_cut(c, A2, b2, best_val, best_x, depth + 1, max_depth)
 
     return best_x, best_val
-
-if __name__ == "__main__":
-    # max z = 3x1 + 2x2
-    # s.t.
-    #    2x1 + x2 <= 18
-    #    2x1 + 3x2 <= 42
-    #    3x1 + x2 <= 24
-    #    x1, x2 >= 0
-
-    c = [3, 2]
-    A = np.array([
-        [2, 1],
-        [2, 3],
-        [3, 1]
-    ])
-    b = np.array([18, 42, 24])
-
-    print("Запуск метода ветвлений и отсечений (Branch and Cut):\n")
-    x_opt, val_opt = branch_and_cut(c, A, b)
-    print("\nЛучшее целое решение:", x_opt)
-    print("Оптимальное значение:", val_opt)
