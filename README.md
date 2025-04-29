@@ -2,7 +2,7 @@
 
 Этот репозиторий содержит реализации двух классических методов решения задач **целочисленного линейного программирования (ILP)**:
 
-- **Cutting Plane Method** (метод плоских отсечений)
+- **Cutting Plane Method** (метод секущей плоскости )
 - **Branch and Cut Method** (метод ветвлений и отсечений)
 
 Оба метода реализованы с нуля на Python, используя только библиотеку `numpy`.
@@ -76,15 +76,17 @@ branch_and_cut(c, A, b, best_val=-inf, best_x=None, depth=0, max_depth=20)
 
 simplex(c, A, b)
 Реализация симплекс-метода для задачи максимизации при ограничениях Ax ≤ b, x ≥ 0.
+
 Возвращает:
 - `x` — оптимальное решение,
 - `val` — значение целевой функции.
 
 is_integer_vector(x, tol=1e-5)
+
 Проверяет, являются ли все компоненты вектора x целыми (с учётом заданной точности tol).
 Пример:
-is_integer_vector([1.00001, 2.0])  # True
-is_integer_vector([1.5, 2.0])      # False
+- is_integer_vector([1.00001, 2.0])  # True
+- is_integer_vector([1.5, 2.0])      # False
 
 ---
 
@@ -111,7 +113,7 @@ is_integer_vector([1.5, 2.0])      # False
 pip install numpy
 
 Запуск метода Cutting Plane:
-python cutting_plane.py
+Сutting plane method.py
 
 Запуск метода Branch and Cut:
-python branch_and_cut.py
+Brunch and cut method.py
