@@ -75,6 +75,7 @@ branch_and_cut(c, A, b, best_val=-inf, best_x=None, depth=0, max_depth=20)
 
 
 simplex(c, A, b)
+
 Реализация симплекс-метода для задачи максимизации при ограничениях Ax ≤ b, x ≥ 0.
 
 Возвращает:
